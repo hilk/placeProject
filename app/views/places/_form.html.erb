@@ -1,0 +1,14 @@
+<%=form_for @places do |f| %>
+<%=f.text_field :name, placehoder:'name'%> </br>
+<%=f.text_field :addres, placehoder:'addres'%></br>
+<%=f.date_field :estabished_at, placehoder:'estabished_at' %></br>
+<%=f.text_field :number, placehoder:'number'%></br>	
+<%=f.text_field :mail, placehoder:'mail'%></br>
+<%=f.label :description %></br>
+<%=f.text_area :description, placehoder: "description", rows: 10 %></br>
+
+<%=f.submit %></br>
+
+<%end%>
+
+

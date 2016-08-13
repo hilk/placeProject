@@ -1,0 +1,8 @@
+<h1> Editing </h1>
+<% if @places.errors.any? %>
+  <h3>
+    <%=@places.errors.full_messages.join(", ") %>
+  </h3>
+<% end %>
+
+<%=render "form" %>

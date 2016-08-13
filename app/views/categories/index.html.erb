@@ -1,0 +1,4 @@
+<%@categories.each do |categories|%>
+<b>ID: </b> <%=categories.id%>
+<%=link_to categories.name, category_path(categories) %>
+<%end%>

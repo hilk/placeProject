@@ -1,0 +1,7 @@
+<%@places.each do |p|%>
+ID: <%=p.id%>
+<%=link_to p.name, place_path(p.id)%>
+Address: <%=p.addres%> </br>
+<%end%>
+</br>
+<%=link_to "Click for add new place", new_place_path(@places)%>
