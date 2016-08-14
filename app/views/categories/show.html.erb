@@ -1,2 +1,12 @@
-<b> ID: </b> <%=@categories.id %>
-<b> Name: </b> <%=@categories.name %>
+<b> ID: </b> <%=@categories.id %></br>
+
+<b> Name: </b> <%=@categories.name %> </br>
+<h2>Places that belongs to <%=@categories.name %></h2>
+
+<% @categories.places.each do |place| %>
+	<%= place.id %>
+	<%=link_to place.name,place_path(place) %> </br><% end %>
+</br>
+	<%=link_to "Back",categories_path %> 
+||
+	<%=link_to "Back to Homepage",places_path %> 

@@ -1,4 +1,8 @@
 <%@categories.each do |categories|%>
 <b>ID: </b> <%=categories.id%>
-<%=link_to categories.name, category_path(categories) %>
+<%=link_to categories.name, category_path(categories) %>  
+<%=link_to "Back", place_path(categories) %> 
+</br>
 <%end%>
+</br>
+<%=link_to "Back to Homepage", places_path %> 

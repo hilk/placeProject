@@ -1,4 +1,4 @@
-<h1> Display places </h1>
+<h1> Display <%=@places.name%> </h1>
 
 <% if @places.errors.any?%>
 	<%=@places.errors.full_messages.join(", ")%>
@@ -10,9 +10,11 @@
 <b> Number: </b> <%=@places.number%></br>
 <b> Mail: </b> <%=@places.mail%></br>
 <b> Description: </b> <%=@places.description%></br>
-<b> Category ID: </b> <%=@places.category.id%></br>
+
 <b> Category Name: </b> <%=@places.category.name%></br>
+
 
 <%=link_to "Back", places_path%> ||
 <%=link_to "Edit", edit_place_path(@places)%> ||
-<%=link_to "Delete", place_path(@places), method: :delete%>
+<%=link_to "Delete", place_path(@places), method: :delete%> </br></br>
+<%=link_to "All categories" , categories_path%>
